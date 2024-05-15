@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="627.0" prefWidth="1118.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.luislopez.controller.MenuClientessController">
+   <children>
+      <ImageView fitHeight="639.0" fitWidth="1118.0" layoutX="1.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/KINALEXPRESS.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblClientes" layoutX="185.0" layoutY="158.0" onMouseClicked="#selecionarElementos" prefHeight="312.0" prefWidth="919.0" stylesheets="@../resource/KinalExpressCSS.css">
+        <columns>
+          <TableColumn fx:id="colCodigoC" minWidth="50.0" prefWidth="75.0" text="clienteID" />
+            <TableColumn fx:id="colNombreC" minWidth="148.0" prefWidth="75.0" text="nombreClientes" />
+            <TableColumn fx:id="colApellidoC" minWidth="142.0" prefWidth="161.0" text="apellidosClientes" />
+            <TableColumn fx:id="colDireccionC" minWidth="0.0" prefWidth="162.0" text="direccionClientes" />
+          <TableColumn fx:id="colNitC" minWidth="90.0" prefWidth="90.0" text="NIT" />
+            <TableColumn fx:id="colTelefonoC" prefWidth="144.0" text="telefonoClientes" />
+            <TableColumn fx:id="colCorreoC" prefWidth="137.0" text="correoClientes" />
+        </columns>
+         <styleClass>
+            <String fx:value="filler" />
+            <String fx:value="column-backgrond" />
+            <String fx:value="table-row-cell" />
+         </styleClass>
+      </TableView>
+      <TextField fx:id="txtNit" layoutX="485.0" layoutY="111.0" prefHeight="25.0" prefWidth="186.0" />
+      <TextField fx:id="txtNombreC" layoutX="485.0" layoutY="30.0" prefHeight="25.0" prefWidth="186.0" />
+      <TextField fx:id="txtApellidosC" layoutX="485.0" layoutY="71.0" prefHeight="25.0" prefWidth="186.0" />
+      <TextField fx:id="txtCorreoC" layoutX="870.0" layoutY="114.0" prefHeight="25.0" prefWidth="186.0" />
+      <TextField fx:id="txtTelefonoC" layoutX="870.0" layoutY="30.0" prefHeight="25.0" prefWidth="186.0" />
+      <TextField fx:id="txtDireccionC" layoutX="870.0" layoutY="71.0" prefHeight="25.0" prefWidth="186.0" />
+      <Label layoutX="308.0" layoutY="30.0" prefHeight="25.0" prefWidth="146.0" text="Nombre de Clientes">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="308.0" layoutY="71.0" prefHeight="25.0" prefWidth="146.0" text="Apellido de Clientes">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="703.0" layoutY="71.0" prefHeight="20.0" prefWidth="146.0" text="Direccion de Cliente">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="703.0" layoutY="30.0" prefHeight="20.0" prefWidth="146.0" text="Telefono de Clientes">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="308.0" layoutY="111.0" prefHeight="20.0" prefWidth="146.0" text="Nit de Cliente">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="703.0" layoutY="111.0" prefHeight="20.0" prefWidth="146.0" text="Correo de Clientes">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigoC" layoutX="23.0" layoutY="209.0" prefHeight="25.0" prefWidth="155.0" />
+      <Label layoutX="23.0" layoutY="176.0" prefHeight="20.0" prefWidth="146.0" text="ID Automatica">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnRegresar" layoutX="878.0" layoutY="517.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="110.0" prefWidth="146.0" stylesheets="@../resource/KinalExpressCSS.css">
+         <styleClass>
+            <String fx:value="button1" />
+            <String fx:value="button2" />
+         </styleClass>
+      </Button>
+      <Button fx:id="btnAgregar" layoutX="185.0" layoutY="468.0" mnemonicParsing="false" onAction="#agregar" prefHeight="76.0" prefWidth="170.0" stylesheets="@../resource/KinalExpressCSS.css" text="Agregar" textAlignment="RIGHT">
+         <graphic>
+            <ImageView fx:id="imagAgregar" fitHeight="100.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/alojamiento-de-archivos.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <styleClass>
+            <String fx:value="button1" />
+            <String fx:value="button2" />
+         </styleClass>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="340.0" layoutY="470.0" mnemonicParsing="false" onAction="#editar" prefHeight="110.0" prefWidth="170.0" stylesheets="@../resource/KinalExpressCSS.css" text="Editar">
+         <graphic>
+            <ImageView fitHeight="100.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/Editar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <styleClass>
+            <String fx:value="button1" />
+            <String fx:value="button2" />
+         </styleClass>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="493.0" layoutY="470.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="110.0" prefWidth="170.0" stylesheets="@../resource/KinalExpressCSS.css" text="Eliminar">
+         <styleClass>
+            <String fx:value="button1" />
+            <String fx:value="button2" />
+         </styleClass>
+         <graphic>
+            <ImageView fx:id="imagEliminar" fitHeight="100.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/alfiler.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="645.0" layoutY="470.0" mnemonicParsing="false" onAction="#reportes" prefHeight="110.0" prefWidth="170.0" stylesheets="@../resource/KinalExpressCSS.css" text="Reportes">
+         <styleClass>
+            <String fx:value="button1" />
+            <String fx:value="button2" />
+         </styleClass>
+         <graphic>
+            <ImageView fitHeight="100.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/Reporte.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnRegresar" layoutX="1.0" layoutY="531.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="98.0" prefWidth="138.0" stylesheets="@../resource/KinalExpressCSS.css">
+         <styleClass>
+            <String fx:value="button1" />
+            <String fx:value="Button" />
+         </styleClass>
+         <graphic>
+            <ImageView fitHeight="115.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" styleClass="button2">
+               <image>
+                  <Image url="@../imagenes/casa.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
